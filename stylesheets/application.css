@@ -322,7 +322,7 @@ a {
   right: 0;
   /* background: rgba(114, 128, 126, 0.116); */
   padding: 1rem 0 1rem 1rem;
-  width: 7.5rem;
+  width: 38rem;
 }
 
 .fa {
@@ -695,5 +695,5 @@ a {
 }
 .dot {
   position: absolute;
-  pointer-events: none; /*performance optimization*/
+  pointer-events: none; /*performans optimizasyonu*/
 }
