@@ -104,14 +104,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var tryAgainButton = document.createElement("button");
   tryAgainButton.id = "tryAgainButton";
-  tryAgainButton.innerHTML = "New Game";
+  tryAgainButton.innerHTML = "Yeni Oyun";
   tryAgainButton.addEventListener('click', function () {
     game.runGame();
   });
   newStrand.appendChild(tryAgainButton); // --------type intro--------
 
   var l = 0;
-  var txt = "DrFranklins-MacBook-Pro: ~DNAborhood$ > Hello, my name is Dr Rosalind Franklin and I need your help! > Guess the genome seqeunce by choosing the correct nucleotides. > Hint: In DNA strands, As are paired with Ts, and Cs are paired with Gs. > ";
+  var txt = "> Merhaba, benim adım Dr. Onur Kürkaya ve yardımınıza ihtiyacım var! > Doğru nükleotitleri seçerek genom dizisini tamamlayın. > İpucu: DNA ipliklerinde A, T ile eşleşir ve C, G ile eşleşir.";
   var speed = 30;
   /* The speed/duration of the effect in milliseconds */
 
@@ -304,13 +304,13 @@ var Game = /*#__PURE__*/function () {
       pool.innerHTML = "";
 
       if (this.numGuesses === 4) {
-        guessesRemaining.innerHTML = this.numGuesses + " guesses left";
+        guessesRemaining.innerHTML = this.numGuesses + " Tahmin Hakkın Kaldı.";
       } else if (this.numGuesses === 3) {
-        guessesRemaining.innerHTML = "only " + this.numGuesses + " guesses left";
+        guessesRemaining.innerHTML = this.numGuesses  + " Tahmin Hakkın Kaldı.";
       } else if (this.numGuesses === 2) {
-        guessesRemaining.innerHTML = "now only " + this.numGuesses + " guesses left";
+        guessesRemaining.innerHTML = this.numGuesses  + " Tahmin Hakkın Kaldı.";
       } else if (this.numGuesses === 1) {
-        guessesRemaining.innerHTML = "last guess! make it count!";
+        guessesRemaining.innerHTML = "Son Hakkın, İyi değerlendir!";
       }
 
       var clicks = 0;
@@ -388,9 +388,9 @@ var Game = /*#__PURE__*/function () {
       this.game.className = "hide-game";
 
       if (this.win) {
-        this.gameOverDiv.innerHTML = "You did it! Click new game to play again! Or don't. I definitely get it.";
+        this.gameOverDiv.innerHTML = "Oyunu kazandınız. tekrar oynamak için yukarıdaki Yeni Oyun'a tıklayın.";
       } else {
-        this.gameOverDiv.innerHTML = "Oh no, game over. Click new game to try again! Or don't. I get it.";
+        this.gameOverDiv.innerHTML = "Oyunu kaybettiniz. tekrar oynamak için yukarıdaki Yeni Oyun`a tıklayın.";
       }
     }
   }]);
